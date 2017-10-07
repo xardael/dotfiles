@@ -98,4 +98,7 @@ hash -d x=~/wd/src/x
 setopt no_hist_verify
 
 alias dotf="/usr/bin/git --git-dir=$HOME/wd/src/dot/ --work-tree=$HOME"
+alias ra=ranger
+alias dcm=doublecmd
+
 
