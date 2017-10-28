@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/wd/src/x:$PATH
+export PATH=$HOME/wd/app/bin:$HOME/wd/src/x:$PATH
 
 # Path to your oh-my-zsh installation.
   export ZSH=/home/pyty/.oh-my-zsh
@@ -93,13 +93,13 @@ alias szyp="sudo zypper"
 alias szi="sudo zypper in"
 
 hash -d wd=~/wd
-hash -d src=~/wd/src
+#hash -d src=~/wd/src
 hash -d x=~/wd/src/x
-hash -d sb=~/wd/in/sb
-hash -d dl=~/wd/in/dl
-hash -d in=~/wd/in
-hash -d proj=~/wd/proj
-hash -d ref=~/wd/ref
+#hash -d sb=~/wd/in/sb
+#hash -d dl=~/wd/in/dl
+#hash -d in=~/wd/in
+#hash -d proj=~/wd/proj
+#hash -d ref=~/wd/ref
 
 setopt no_hist_verify
 
