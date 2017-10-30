@@ -4,29 +4,6 @@ export PATH=$HOME/wd/app/bin:$HOME/wd/src/x:$PATH
 export DEFAULT_USER="pyty"
 export TERM="xterm-256color"
 
-#POWERLEVEL9K_MODE='nerdfont-complete'
-#POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_MODE='awesome-patched'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status root_indicator context dir_writable dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs command_execution_time pyenv time)
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-POWERLEVEL9K_TIME_FORMAT="%D{%H:%M \uE868}"
-
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_ICON=$'\uF253'
-POWERLEVEL9K_VCS_BRANCH_ICON=$'\uE0A0 '
-
-POWERLEVEL9K_STATUS_VERBOSE=false
-POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=false
-
-POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
-POWERLEVEL9K_SHOW_CHANGESET=false
-POWERLEVEL9K_VCS_GIT_ICON=''
-POWERLEVEL9K_VCS_GIT_GITHUB_ICON=''
-#POWERLEVEL9K_FOLDER_ICON=''
-#POWERLEVEL9K_HOME_ICON=''
-#POWERLEVEL9K_HOME_SUB_ICON=''
-
 # Path to your oh-my-zsh installation.
 export ZSH=/home/pyty/.oh-my-zsh
 
@@ -78,13 +55,38 @@ DISABLE_LS_COLORS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='red'
-plugins=(git extract z sublime sudo zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='red'
+plugins=(git extract z sublime sudo zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+#POWERLEVEL9K_MODE='nerdfont-complete'
+#POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_MODE='awesome-patched'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status root_indicator context dir_writable dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs command_execution_time pyenv time)
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_TIME_FORMAT="%D{\uf073 %H:%M}" #\uf017
+
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_ICON=$'\uF253'
+POWERLEVEL9K_VCS_BRANCH_ICON=$'\uE0A0 '
+
+POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=false
+
+POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
+POWERLEVEL9K_SHOW_CHANGESET=false
+POWERLEVEL9K_VCS_GIT_ICON=''
+POWERLEVEL9K_VCS_GIT_GITHUB_ICON=''
+#POWERLEVEL9K_FOLDER_ICON=''
+#POWERLEVEL9K_HOME_ICON=''
+#POWERLEVEL9K_HOME_SUB_ICON=''
+
+
+# This HAS to be after source $ZSH/oh-my-zsh.sh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -134,8 +136,3 @@ setopt no_hist_verify
 alias dotf="/usr/bin/git --git-dir=$HOME/wd/src/dot/ --work-tree=$HOME"
 alias ra=ranger
 alias dcm=doublecmd
-
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=red,bold'
-
-
-
