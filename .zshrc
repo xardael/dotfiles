@@ -8,10 +8,10 @@ export TERM="xterm-256color"
 #POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_MODE='awesome-patched'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status root_indicator context dir_writable dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs command_execution_time time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs command_execution_time pyenv time)
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-POWERLEVEL9K_TIME_FORMAT="%D{%H:%M \uf073}"
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M \uE868}"
 
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_ICON=$'\uF253'
 POWERLEVEL9K_VCS_BRANCH_ICON=$'\uE0A0 '
@@ -78,7 +78,9 @@ DISABLE_LS_COLORS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions extract z sublime sudo)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='red'
+plugins=(git extract z sublime sudo zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='red'
 
 source $ZSH/oh-my-zsh.sh
 
@@ -132,5 +134,8 @@ setopt no_hist_verify
 alias dotf="/usr/bin/git --git-dir=$HOME/wd/src/dot/ --work-tree=$HOME"
 alias ra=ranger
 alias dcm=doublecmd
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=red,bold'
+
 
 
