@@ -1,14 +1,37 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/wd/app/bin:$HOME/wd/src/x:$PATH
+export DEFAULT_USER="pyty"
+export TERM="xterm-256color"
+
+#POWERLEVEL9K_MODE='nerdfont-complete'
+#POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_MODE='awesome-patched'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir_writable dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs status history command_execution_time ram disk_usage)
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+#POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M \uf073 %d.%m.%y}"
+
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_ICON=$'\uF253'
+POWERLEVEL9K_VCS_BRANCH_ICON=$'\uE0A0 '
+
+POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
+POWERLEVEL9K_SHOW_CHANGESET=true
+POWERLEVEL9K_VCS_GIT_ICON=''
+POWERLEVEL9K_VCS_GIT_GITHUB_ICON=''
+POWERLEVEL9K_FOLDER_ICON=''
+POWERLEVEL9K_HOME_ICON=''
+POWERLEVEL9K_HOME_SUB_ICON=''
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/pyty/.oh-my-zsh
+export ZSH=/home/pyty/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,7 +75,7 @@ DISABLE_LS_COLORS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions extract z sublime)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions extract z sublime sudo)
 
 source $ZSH/oh-my-zsh.sh
 
