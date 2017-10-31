@@ -7,6 +7,33 @@ export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=/home/pyty/.oh-my-zsh
 
+# Powerlevel9k has to be _before_ ZSH_THEME
+
+POWERLEVEL9K_MODE='nerdfont-complete'
+#POWERLEVEL9K_MODE='awesome-fontconfig'
+#POWERLEVEL9K_MODE='awesome-patched'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status root_indicator context dir_writable dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs command_execution_time pyenv time)
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_TIME_FORMAT="\uf017 %D{%H:%M}" #\uf017
+
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_ICON=$'\uF253'
+#POWERLEVEL9K_VCS_BRANCH_ICON=$'\uE0A0 '
+
+POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=false
+
+#POWERLEVEL9K_OS_ICON="\uf308"
+
+POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
+POWERLEVEL9K_SHOW_CHANGESET=true
+POWERLEVEL9K_VCS_GIT_ICON='\uf406'
+POWERLEVEL9K_VCS_GIT_GITHUB_ICON='\uf406'
+#POWERLEVEL9K_FOLDER_ICON=''
+#POWERLEVEL9K_HOME_ICON=''
+#POWERLEVEL9K_HOME_SUB_ICON=''
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -27,7 +54,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
-DISABLE_LS_COLORS="true"
+#DISABLE_LS_COLORS="false"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -61,32 +88,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-#POWERLEVEL9K_MODE='nerdfont-complete'
-#POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_MODE='awesome-patched'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status root_indicator context dir_writable dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs command_execution_time pyenv time)
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-POWERLEVEL9K_TIME_FORMAT="%D{\uf073 %H:%M}" #\uf017
-
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_ICON=$'\uF253'
-POWERLEVEL9K_VCS_BRANCH_ICON=$'\uE0A0 '
-
-POWERLEVEL9K_STATUS_VERBOSE=false
-POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=false
-
-POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
-POWERLEVEL9K_SHOW_CHANGESET=false
-POWERLEVEL9K_VCS_GIT_ICON=''
-POWERLEVEL9K_VCS_GIT_GITHUB_ICON=''
-#POWERLEVEL9K_FOLDER_ICON=''
-#POWERLEVEL9K_HOME_ICON=''
-#POWERLEVEL9K_HOME_SUB_ICON=''
-
-
 # This HAS to be after source $ZSH/oh-my-zsh.sh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
