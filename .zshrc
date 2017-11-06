@@ -140,14 +140,17 @@ alias zyp="zypper"
 alias szyp="sudo zypper"
 alias szi="sudo zypper in"
 
-hash -d wd=~/wd
-#hash -d src=~/wd/src
-hash -d x=~/wd/src/x
-#hash -d sb=~/wd/in/sb
-#hash -d dl=~/wd/in/dl
-#hash -d in=~/wd/in
-#hash -d proj=~/wd/proj
-#hash -d ref=~/wd/ref
+hash -d   wd=~/wd
+hash -d  app=~/wd/app
+hash -d   in=~/wd/in
+hash -d proj=~/wd/proj
+hash -d  ref=~/wd/ref
+hash -d  src=~/wd/src
+
+hash -d   sb=~/wd/in/sb
+hash -d   dl=~/wd/in/dl
+hash -d    x=~/wd/src/x
+
 
 setopt no_hist_verify
 
